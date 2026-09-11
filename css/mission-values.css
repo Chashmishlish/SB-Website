@@ -1,0 +1,801 @@
+.mission-hero {
+    padding: 140px 20px 90px;
+    background: var(--navy);
+    color: var(--white);
+    text-align: center;
+}
+
+.mission-hero .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mission-hero h1 span {
+    color: var(--gold);
+}
+
+.mission-hero p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.7;
+}
+
+.ceo-vision {
+    padding: 100px 0;
+    background: var(--light-bg);
+}
+
+.vision-heading h2 {
+    font-size: 2.7rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-top: 15px;
+}
+
+.vision-heading h2 span {
+    color: var(--gold);
+}
+
+.vision-card {
+    height: 100%;
+    padding: 35px;
+    background: white;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    transition: all 0.3s ease;
+}
+
+.vision-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.vision-number {
+    display: block;
+    color: goldenrod;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.vision-card h3 {
+    color: var(--navy);
+    font-size: 1.35rem;
+    margin-bottom: 15px;
+}
+
+.vision-card p {
+    color: #666;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.vision-card-featured {
+    background: var(--white);
+}
+
+.vision-card-featured h3 {
+    color: black;
+}
+
+.vision-card-featured p {
+    color: #666;
+}
+
+@media (max-width: 768px) {
+
+    .mission-hero {
+        padding: 120px 20px 80px;
+    }
+
+    .mission-hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .ceo-vision {
+        padding: 70px 20px;
+    }
+
+    .vision-heading h2 {
+        font-size: 2rem;
+    }
+
+    .vision-card {
+        padding: 28px;
+    }
+
+}
+
+/* Premium mission and values theme */
+
+.mission-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 78px 20px 66px;
+    background: #050505;
+}
+
+.mission-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background: url("../images/Building.png") center / cover no-repeat;
+    opacity: 0.3;
+}
+
+.mission-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(2, 13, 44, 0.5), rgba(0, 0, 0, 0.86));
+}
+
+.mission-hero h1,
+.vision-heading h2,
+.core-values-heading h2,
+.strengths-heading h2,
+.commitments-heading h2,
+.mission-closing h2 {
+    color: #fff8df;
+    font-family: Georgia, "Times New Roman", serif;
+    text-shadow: 0 0 12px rgba(212, 175, 55, 0.25), 0 0 24px rgba(2, 13, 44, 0.8);
+}
+
+.ceo-vision,
+.our-mission,
+.core-values,
+.our-strengths,
+.our-commitments {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 90% 18%, rgba(212, 175, 55, 0.1), transparent 22%),
+        linear-gradient(135deg, #050505, #11100d 54%, #050505);
+}
+
+.our-mission,
+.our-strengths {
+    background:
+        radial-gradient(circle at 10% 70%, rgba(2, 13, 44, 0.65), transparent 28%),
+        linear-gradient(135deg, #0b0b0b, #17130d 54%, #070707);
+}
+
+.vision-heading p,
+.core-values-heading p,
+.strengths-heading p,
+.commitments-heading p,
+.mission-text,
+.vision-card p,
+.core-value-card p,
+.strength-card p,
+.commitment-card p {
+    color: rgba(255, 255, 255, 0.68);
+}
+
+.vision-card,
+.core-value-card,
+.strength-card,
+.commitment-card {
+    position: relative;
+    height: 100%;
+    padding: 30px;
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.28);
+    border-radius: 4px;
+    background: linear-gradient(145deg, rgba(22, 20, 16, 0.96), rgba(7, 7, 7, 0.98));
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.28);
+    transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.vision-card::before,
+.core-value-card::before,
+.strength-card::before,
+.commitment-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 18px;
+    left: 18px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: 0.7;
+}
+
+.vision-card:hover,
+.core-value-card:hover,
+.strength-card:hover,
+.commitment-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(212, 175, 55, 0.76);
+    box-shadow: 0 24px 46px rgba(0, 0, 0, 0.42), 0 0 24px rgba(212, 175, 55, 0.1);
+}
+
+.vision-card h3,
+.core-value-card h3,
+.strength-card h3,
+.commitment-card h3,
+.our-mission h2 {
+    color: #fff8df;
+}
+
+.vision-card-featured,
+.strength-card-dark {
+    background: linear-gradient(145deg, rgba(28, 24, 13, 0.98), rgba(7, 7, 7, 0.98));
+}
+
+.mission-closing {
+    position: relative;
+    overflow: hidden;
+    padding: 82px 20px;
+    background:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(2, 13, 44, 0.58), rgba(0, 0, 0, 0.9)),
+        url("../images/Building.png") center / cover no-repeat;
+    border-top: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.mission-closing p {
+    color: rgba(255, 255, 255, 0.72);
+}
+
+/* Layered section backgrounds */
+
+.ceo-vision::before,
+.our-mission::before,
+.core-values::before,
+.our-strengths::before,
+.our-commitments::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.ceo-vision::before {
+    background:
+        radial-gradient(circle at 8% 12%, rgba(212, 175, 55, 0.16), transparent 20%),
+        linear-gradient(115deg, transparent 0 48%, rgba(255, 255, 255, 0.025) 49%, transparent 50%);
+}
+
+.our-mission::before {
+    background:
+        linear-gradient(90deg, rgba(212, 175, 55, 0.12) 1px, transparent 1px),
+        linear-gradient(rgba(212, 175, 55, 0.06) 1px, transparent 1px);
+    background-size: 84px 84px;
+    mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0.55), transparent 72%);
+}
+
+.core-values::before {
+    background:
+        radial-gradient(circle at 90% 80%, rgba(2, 13, 44, 0.9), transparent 28%),
+        radial-gradient(circle at 12% 16%, rgba(212, 175, 55, 0.1), transparent 24%);
+}
+
+.our-strengths::before {
+    background:
+        linear-gradient(90deg, rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.56)),
+        url("../images/Building.png") center / cover no-repeat;
+    opacity: 0.18;
+}
+
+.our-commitments::before {
+    background:
+        radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.14), transparent 28%),
+        linear-gradient(135deg, transparent 0 48%, rgba(212, 175, 55, 0.06) 49%, transparent 50%);
+}
+
+.ceo-vision > .container,
+.our-mission > .container,
+.core-values > .container,
+.our-strengths > .container,
+.our-commitments > .container {
+    position: relative;
+    z-index: 1;
+}
+
+.mission-closing::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(115deg, transparent 24%, rgba(212, 175, 55, 0.16) 49%, transparent 74%);
+    pointer-events: none;
+}
+
+.mission-closing .hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 22px;
+    border: 1px solid rgba(255, 239, 177, 0.7);
+    border-radius: 4px;
+    background: linear-gradient(135deg, #b8860b, #f1d77a);
+    color: #080808;
+    font-weight: 700;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.36);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.mission-closing .hero-btn:hover {
+    color: #080808;
+    transform: translateY(-4px);
+    filter: brightness(1.08);
+    box-shadow: 0 16px 32px rgba(212, 175, 55, 0.32), 0 0 18px rgba(212, 175, 55, 0.24);
+}
+
+.flip-card {
+    min-height: 225px;
+    padding: 0;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 225px;
+    transform-style: preserve-3d;
+    transition: transform 0.65s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.flip-card:hover .flip-card-inner,
+.flip-card.is-flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.flip-card-front p {
+    display: none;
+}
+
+.flip-card-front h3,
+.flip-card-back h3 {
+    margin: 18px 0 0;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+    background: linear-gradient(145deg, rgba(30, 26, 15, 0.98), rgba(7, 7, 7, 0.99));
+}
+
+.flip-card-back p {
+    margin: 14px 0 0;
+}
+
+.core-values .flip-card-front h3,
+.core-values .flip-card-back h3 {
+    color: #fff8df;
+}
+
+.core-values .flip-card-front .value-number,
+.core-values .flip-card-back .value-number,
+.our-commitments .flip-card-front .commitment-number,
+.our-commitments .flip-card-back .commitment-number {
+    color: var(--gold-light);
+}
+
+.site-footer {
+    padding: 4px 0 8px;
+}
+
+.site-footer > .container {
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.core-values .flip-card {
+    background: #f7f5ef;
+    border-color: rgba(2, 13, 44, 0.18);
+}
+
+.core-values .flip-card-front,
+.core-values .flip-card-back {
+    background: #f7f5ef;
+}
+
+.core-values .flip-card-front h3,
+.core-values .flip-card-back h3 {
+    color: #050505;
+}
+
+.core-values .flip-card-front p,
+.core-values .flip-card-back p {
+    color: #55514a;
+}
+
+.core-values .flip-card-front .value-number,
+.core-values .flip-card-back .value-number {
+    color: #050505;
+}
+
+.our-commitments .flip-card {
+    background: #050505;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.our-commitments .flip-card-front,
+.our-commitments .flip-card-back {
+    background: #050505;
+}
+
+.our-commitments .flip-card-front h3,
+.our-commitments .flip-card-back h3,
+.our-commitments .flip-card-front p,
+.our-commitments .flip-card-back p,
+.our-commitments .flip-card-front .commitment-number,
+.our-commitments .flip-card-back .commitment-number {
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .mission-hero {
+        padding: 62px 20px 54px;
+    }
+
+    .mission-hero h1 {
+        font-size: 2.6rem;
+    }
+
+    .vision-card,
+    .core-value-card,
+    .strength-card,
+    .commitment-card {
+        padding: 25px;
+    }
+
+    .flip-card,
+    .flip-card-inner {
+        min-height: 220px;
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+        padding: 25px;
+    }
+}
+
+.our-mission {
+    padding: 100px 0;
+    background: white;
+}
+
+.our-mission h2 {
+    color: var(--navy);
+    font-size: 2.7rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.our-mission h2 span {
+    color: var(--gold);
+}
+
+.mission-text {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+
+    .our-mission {
+        padding: 70px 20px;
+    }
+
+    .our-mission h2 {
+        font-size: 2rem;
+    }
+
+}
+
+.core-values {
+    padding: 100px 0;
+    background: var(--light-bg);
+}
+
+.core-values-heading h2 {
+    color: var(--navy);
+    font-size: 2.7rem;
+    font-weight: 700;
+    margin: 15px 0;
+}
+
+.core-values-heading h2 span {
+    color: var(--gold);
+}
+
+.core-values-heading p {
+    color: #666;
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.core-value-card {
+    height: 100%;
+    padding: 35px;
+    background: white;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    transition: all 0.3s ease;
+}
+
+.core-value-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.value-number {
+    color: goldenrod;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.core-value-card h3 {
+    color: var(--navy);
+    font-size: 1.4rem;
+    margin: 18px 0 14px;
+}
+
+.core-value-card p {
+    color: #666;
+    line-height: 1.8;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+
+    .core-values {
+        padding: 70px 20px;
+    }
+
+    .core-values-heading h2 {
+        font-size: 2rem;
+    }
+
+    .core-value-card {
+        padding: 28px;
+    }
+}
+
+.our-strengths {
+    padding: 100px 0;
+    background: white;
+}
+
+.strengths-heading h2 {
+    color: var(--navy);
+    font-size: 2.7rem;
+    font-weight: 700;
+    margin: 15px 0;
+}
+
+.strengths-heading h2 span {
+    color: var(--gold);
+}
+
+.strengths-heading p {
+    color: #666;
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.strength-card {
+    height: 100%;
+    padding: 35px;
+    background: var(--light-bg);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    transition: all 0.3s ease;
+}
+
+.strength-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.strength-number {
+    color: var(--gold);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.strength-card h3 {
+    color: var(--navy);
+    font-size: 1.35rem;
+    margin: 18px 0 14px;
+}
+
+.strength-card p {
+    color: #666;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.strength-card-dark {
+    background: #f7f6f2;
+}
+
+.strength-card-dark h3 {
+    color: black;
+}
+
+.strength-card-dark p {
+    color: #666;
+}
+
+@media (max-width: 768px) {
+
+    .our-strengths {
+        padding: 70px 20px;
+    }
+
+    .strengths-heading h2 {
+        font-size: 2rem;
+    }
+
+    .strength-card {
+        padding: 28px;
+    }
+}
+
+.our-commitments {
+    padding: 100px 0;
+    background: var(--light-bg);
+}
+
+.commitments-heading h2 {
+    color: var(--navy);
+    font-size: 2.7rem;
+    font-weight: 700;
+    margin: 15px 0;
+}
+
+.commitments-heading h2 span {
+    color: var(--gold);
+}
+
+.commitments-heading p {
+    color: #666;
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.commitment-card {
+    height: 100%;
+    padding: 35px;
+    background: white;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    transition: all 0.3s ease;
+}
+
+.commitment-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.commitment-number {
+    color: var(--gold);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.commitment-card h3 {
+    color: var(--navy);
+    font-size: 1.35rem;
+    margin: 18px 0 14px;
+}
+
+.commitment-card p {
+    color: #666;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.mission-closing {
+    padding: 100px 0;
+    background: var(--navy);
+    /* background: var(--gold-gradient); */
+    color: white;
+}
+
+.mission-closing h2 {
+    font-size: 2.7rem;
+    font-weight: 700;
+    margin: 15px 0;
+}
+
+.mission-closing h2 span {
+    color: var(--gold);
+}
+
+.mission-closing p {
+    color: rgba(255, 255, 255, 0.75);
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+
+    .our-commitments {
+        padding: 70px 20px;
+    }
+
+    .commitments-heading h2,
+    .mission-closing h2 {
+        font-size: 2rem;
+    }
+
+    .commitment-card {
+        padding: 28px;
+    }
+
+    .mission-closing {
+        padding: 70px 20px;
+    }
+
+}
+
+.mission-hero h1,
+.vision-heading h2,
+.our-mission h2,
+.core-values-heading h2,
+.strengths-heading h2,
+.commitments-heading h2,
+.mission-closing h2,
+.vision-card h3,
+.core-value-card h3,
+.strength-card h3,
+.commitment-card h3,
+.vision-card,
+.core-value-card,
+.strength-card,
+.commitment-card {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.core-values .flip-card-front,
+.core-values .flip-card-back {
+    box-shadow: inset 0 0 0 1px rgba(212, 175, 55, 0.52);
+}
+
+.core-values .flip-card-front::after,
+.core-values .flip-card-back::after {
+    content: "";
+    position: absolute;
+    right: 18px;
+    bottom: 18px;
+    width: 28px;
+    height: 28px;
+    border-right: 2px solid rgba(212, 175, 55, 0.7);
+    border-bottom: 2px solid rgba(212, 175, 55, 0.7);
+}
+
+.core-values .flip-card-front .value-number,
+.core-values .flip-card-back .value-number {
+    width: fit-content;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--gold);
+}

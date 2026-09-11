@@ -1,0 +1,918 @@
+/* =========================================================
+   LEADERSHIP 
+   ========================================================= */
+
+.leadership-page {
+    --lead-navy: #050d1c;
+    --lead-navy-2: #020812;
+    --lead-champagne: #d6b86a;
+    --lead-champagne-light: #e7cf8a;
+
+    --lead-dark: #101820;
+    --lead-text: #59636d;
+    --lead-muted: #68717a;
+    --lead-white: #ffffff;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.leadership-page .leadership-hero {
+    position: relative;
+
+    min-height: 470px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 125px 20px 105px;
+
+    overflow: hidden;
+
+    background: var(--lead-navy-2);
+
+    color: var(--lead-white);
+
+    border-bottom: 1px solid rgba(214, 184, 106, 0.22);
+
+    font-family: "Inter", sans-serif;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   HERO BACKGROUND
+      ========================================================= */
+
+.leadership-page .leadership-hero::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(180deg,
+            rgba(2, 8, 18, 0.72) 0%,
+            rgba(2, 8, 18, 0.95) 100%),
+        url("../../images/Building.png") center / cover no-repeat;
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   SUBTLE CHAMPAGNE ATMOSPHERE
+   ========================================================= */
+
+.leadership-page .leadership-hero::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(90deg,
+            transparent 0%,
+            rgba(214, 184, 106, 0.035) 50%,
+            transparent 100%);
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
+
+.leadership-page .leadership-hero .container {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   HERO SUBTITLE
+   ========================================================= */
+
+.leadership-page .leadership-hero .section-subtitle {
+    position: relative;
+
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    color: var(--lead-champagne);
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    line-height: 1.4;
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    text-align: center;
+}
+
+
+
+.leadership-page .leadership-hero .section-subtitle::after {
+    content: "";
+
+    display: block;
+
+    width: 42px;
+    height: 2px;
+
+    margin: 10px auto 0;
+
+    background: var(--lead-champagne);
+}
+
+
+/* =========================================================
+   HERO HEADING
+   ========================================================= */
+
+.leadership-page .leadership-hero h1 {
+    margin: 0 0 18px;
+
+    color: var(--lead-white) !important;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(3rem, 5.5vw, 5rem);
+
+    font-weight: 600;
+
+    line-height: 1.12;
+
+    letter-spacing: -1.5px;
+
+    text-align: center !important;
+}
+
+
+/* Gold accent */
+
+.leadership-page .leadership-hero h1 span {
+    color: var(--lead-champagne) !important;
+}
+
+
+/* =========================================================
+   HERO PARAGRAPH
+   ========================================================= */
+
+.leadership-page .leadership-hero p {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    color: rgba(255, 255, 255, 0.68);
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 1rem;
+    font-weight: 400;
+
+    line-height: 1.7;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   MAIN LEADERSHIP SECTION
+   ========================================================= */
+
+.leadership-page .leadership-section {
+    position: relative;
+
+    padding: 105px 0 120px;
+
+    overflow: hidden;
+
+    background: #f4f4f1;
+
+    border-top: 1px solid rgba(214, 184, 106, 0.35);
+    border-bottom: 1px solid rgba(16, 24, 32, 0.10);
+
+    font-family: "Inter", sans-serif;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.leadership-page .leadership-section .section-heading {
+    margin-bottom: 65px;
+}
+
+
+.leadership-page .leadership-section .section-subtitle {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: var(--lead-champagne);
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+.leadership-page .leadership-section .section-heading h2 {
+    margin: 0;
+
+    color: var(--lead-dark);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(38px, 4.5vw, 60px);
+
+    font-weight: 500;
+
+    line-height: 1.15;
+}
+
+
+.leadership-page .leadership-section .section-heading h2 span {
+    color: inherit;
+}
+
+
+.leadership-page .leadership-section .section-heading p {
+    max-width: 650px;
+
+    margin: 22px auto 0;
+
+    color: var(--lead-muted);
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   SHOWCASE
+   ========================================================= */
+
+.leadership-page .leadership-showcase {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.08fr) minmax(380px, 0.92fr);
+
+    min-height: 610px;
+
+    border-top: 1px solid rgba(16, 24, 32, 0.14);
+    border-bottom: 1px solid rgba(16, 24, 32, 0.14);
+}
+
+
+/* =========================================================
+   LEFT IMAGE
+   ========================================================= */
+
+.leadership-page .leadership-visual {
+    min-width: 0;
+}
+
+
+.leadership-page .leadership-image-frame {
+    position: relative;
+
+    width: 100%;
+    height: 610px;
+
+    overflow: hidden;
+
+    background: #101820;
+
+    border-right: 1px solid rgba(16, 24, 32, 0.15);
+}
+
+
+/* =========================================================
+   IMAGE SLIDES
+   ========================================================= */
+
+.leadership-page .leadership-slide {
+    position: absolute;
+    inset: 0;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: scale(1.035);
+
+    transition:
+        opacity 0.7s ease,
+        transform 1s ease,
+        visibility 0.7s ease;
+}
+
+
+.leadership-page .leadership-slide.active {
+    opacity: 1;
+    visibility: visible;
+
+    transform: scale(1);
+}
+
+
+.leadership-page .leadership-slide img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+   ========================================================= */
+
+.leadership-page .image-overlay {
+    position: absolute;
+    inset: 0;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(180deg,
+            rgba(4, 10, 18, 0) 45%,
+            rgba(4, 10, 18, 0.55) 100%);
+}
+
+
+/* =========================================================
+   IMAGE COUNTER
+   ========================================================= */
+
+.leadership-page .leadership-counter {
+    position: absolute;
+
+    z-index: 4;
+
+    bottom: 32px;
+    left: 35px;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    color: #ffffff;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+}
+
+
+.leadership-page .leadership-counter #currentSlide {
+    color: var(--lead-champagne-light);
+
+    font-size: 23px;
+}
+
+
+.leadership-page .counter-line {
+    width: 42px;
+    height: 1px;
+
+    background: rgba(255, 255, 255, 0.5);
+}
+
+
+/* =========================================================
+   RIGHT CONTENT
+   ========================================================= */
+
+.leadership-page .leadership-content {
+    position: relative;
+
+    min-width: 0;
+    min-height: 610px;
+
+    padding: 70px 70px 45px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #f4f4f1;
+}
+
+
+/* =========================================================
+   LEADER INFORMATION
+   ========================================================= */
+
+.leadership-page .leader-info {
+    display: none;
+
+    flex: 1;
+
+    animation: leadershipFade 0.55s ease;
+}
+
+
+.leadership-page .leader-info.active {
+    display: block;
+}
+
+
+@keyframes leadershipFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   ROLE
+   ========================================================= */
+
+.leadership-page .leader-role {
+    display: inline-block;
+
+    margin-bottom: 28px;
+
+    color: var(--lead-champagne);
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   NAME
+   Single color throughout
+   ========================================================= */
+
+.leadership-page .leader-info h3 {
+    max-width: 470px;
+
+    margin: 0;
+
+    color: var(--lead-dark);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(42px, 4.3vw, 68px);
+
+    font-weight: 600;
+
+    line-height: 1.08;
+}
+
+
+/* Prevent two-tone names */
+
+.leadership-page .leader-info h3 span {
+    display: block;
+
+    color: inherit;
+}
+
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.leadership-page .leader-divider {
+    width: 60px;
+    height: 1px;
+
+    margin: 35px 0 30px;
+
+    background: var(--lead-champagne);
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.leadership-page .leader-info p {
+    max-width: 480px;
+
+    margin: 0;
+
+    color: var(--lead-text);
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   PROFILE LINK
+   ========================================================= */
+
+.leadership-page .profile-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+
+    margin-top: 42px;
+
+    color: var(--lead-dark);
+
+    text-decoration: none;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 2.5px;
+
+    transition: color 0.3s ease;
+}
+
+
+.leadership-page .profile-link span {
+    color: var(--lead-champagne);
+
+    font-size: 20px;
+    line-height: 1;
+
+    transition: transform 0.3s ease;
+}
+
+
+.leadership-page .profile-link:hover {
+    color: var(--lead-champagne);
+}
+
+
+.leadership-page .profile-link:hover span {
+    transform: translateX(6px);
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.leadership-page .leadership-navigation {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    margin-top: auto;
+    padding-top: 35px;
+
+    border-top: 1px solid rgba(16, 24, 32, 0.12);
+}
+
+
+.leadership-page .leadership-navigation button {
+    padding: 0;
+
+    border: 0;
+    outline: none;
+
+    background: transparent;
+
+    color: #4d5660;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: color 0.3s ease;
+}
+
+
+.leadership-page .leadership-navigation button span {
+    color: var(--lead-champagne);
+
+    font-size: 17px;
+
+    transition: transform 0.3s ease;
+}
+
+
+.leadership-page .leadership-prev {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.leadership-page .leadership-next {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.leadership-page .leadership-prev:hover,
+.leadership-page .leadership-next:hover {
+    color: var(--lead-champagne);
+}
+
+
+.leadership-page .leadership-prev:hover span {
+    transform: translateX(-4px);
+}
+
+
+.leadership-page .leadership-next:hover span {
+    transform: translateX(4px);
+}
+
+
+/* Navigation line */
+
+.leadership-page .navigation-line {
+    flex: 1;
+
+    height: 1px;
+
+    background: rgba(16, 24, 32, 0.16);
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+.leadership-page .leadership-navigation button:focus-visible,
+.leadership-page .profile-link:focus-visible {
+    outline: 1px solid var(--lead-champagne);
+
+    outline-offset: 8px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    .leadership-page .leadership-hero {
+        min-height: 440px;
+
+        padding: 105px 20px 85px;
+    }
+
+
+    .leadership-page .leadership-section {
+        padding: 85px 0 95px;
+    }
+
+
+    .leadership-page .leadership-showcase {
+        grid-template-columns: 1fr;
+    }
+
+
+    .leadership-page .leadership-image-frame {
+        height: 560px;
+
+        border-right: 0;
+        border-bottom: 1px solid rgba(16, 24, 32, 0.15);
+    }
+
+
+    .leadership-page .leadership-content {
+        min-height: 520px;
+
+        padding: 55px 50px 40px;
+    }
+
+
+    .leadership-page .leader-info h3 {
+        font-size: 55px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .leadership-page .leadership-hero {
+        min-height: 390px;
+
+        padding: 90px 18px 75px;
+    }
+
+
+    .leadership-page .leadership-hero h1 {
+        font-size: 44px;
+
+        letter-spacing: -0.8px;
+    }
+
+
+    .leadership-page .leadership-hero p {
+        font-size: 0.9rem;
+    }
+
+
+    .leadership-page .leadership-section {
+        padding: 70px 0 75px;
+    }
+
+
+    .leadership-page .leadership-section .section-heading {
+        margin-bottom: 45px;
+    }
+
+
+    .leadership-page .leadership-section .section-heading h2 {
+        font-size: 38px;
+    }
+
+
+    .leadership-page .leadership-image-frame {
+        height: 430px;
+    }
+
+
+    .leadership-page .leadership-content {
+        min-height: 510px;
+
+        padding: 45px 25px 30px;
+    }
+
+
+    .leadership-page .leader-role {
+        margin-bottom: 22px;
+
+        font-size: 9px;
+        letter-spacing: 2.5px;
+    }
+
+
+    .leadership-page .leader-info h3 {
+        font-size: 45px;
+    }
+
+
+    .leadership-page .leader-divider {
+        margin: 28px 0 24px;
+    }
+
+
+    .leadership-page .leader-info p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+
+    .leadership-page .profile-link {
+        margin-top: 32px;
+    }
+
+
+    .leadership-page .leadership-navigation {
+        margin-top: 45px;
+        padding-top: 25px;
+    }
+
+
+    .leadership-page .leadership-navigation button {
+        font-size: 9px;
+        letter-spacing: 1.5px;
+    }
+
+
+    .leadership-page .navigation-line {
+        min-width: 25px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .leadership-page .leadership-hero {
+        min-height: 360px;
+
+        padding: 80px 16px 65px;
+    }
+
+
+    .leadership-page .leadership-hero h1 {
+        font-size: 38px;
+    }
+
+
+    .leadership-page .leadership-section .section-heading h2 {
+        font-size: 32px;
+    }
+
+
+    .leadership-page .leadership-image-frame {
+        height: 370px;
+    }
+
+
+    .leadership-page .leader-info h3 {
+        font-size: 39px;
+    }
+
+
+    .leadership-page .leadership-counter {
+        left: 22px;
+        bottom: 22px;
+    }
+
+}
+
+.leader-profile {
+    padding: 80px 0;
+}
+
+.leader-image {
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+    border: 1px solid rgba(214, 184, 106, 0.4);
+    background: #020812;
+    line-height: 0
+}

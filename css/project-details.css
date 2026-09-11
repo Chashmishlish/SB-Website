@@ -1,0 +1,787 @@
+/* =========================================================
+   PROJECT DETAIL PAGE
+========================================================= */
+
+
+/* ---------------------------------------------------------
+   PAGE BACKGROUND
+--------------------------------------------------------- */
+
+body {
+    background:
+        radial-gradient(
+            circle at 92% 8%,
+            rgba(212, 175, 55, 0.10),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 5% 88%,
+            rgba(11, 21, 38, 0.75),
+            transparent 32%
+        ),
+        #020812;
+
+    color: #f5f1e8;
+}
+
+
+/* ---------------------------------------------------------
+   PROJECT HERO
+--------------------------------------------------------- */
+
+.project-detail-hero {
+    position: relative;
+    min-height: 52vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 150px 0 90px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(212, 175, 55, 0.08),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #050d1c 0%,
+            #0b1526 52%,
+            #050d1c 100%
+        );
+}
+
+
+/* subtle glow */
+
+.project-detail-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    right: -180px;
+    bottom: -230px;
+
+    border-radius: 50%;
+
+    background: rgba(212, 175, 55, 0.08);
+
+    filter: blur(80px);
+
+    pointer-events: none;
+}
+
+
+/* subtitle */
+
+.project-detail-hero .section-subtitle {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    font-family: "Times New Roman", serif;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    color: #d6b86a;
+
+    text-transform: uppercase;
+}
+
+
+/* project title */
+
+.project-detail-hero h1 {
+    margin: 0;
+
+    font-family: "Times New Roman", serif;
+
+    font-size: clamp(3.2rem, 7vw, 6.5rem);
+
+    font-weight: 700;
+
+    line-height: 0.95;
+
+    letter-spacing: -2px;
+
+    color: #f5f1e8;
+
+    animation: projectTitle 1s ease forwards;
+}
+
+
+/* golden project name */
+
+.project-detail-hero h1 span {
+    color: #d6b86a;
+
+    display: inline-block;
+
+    background: linear-gradient(
+        90deg,
+        #b8860b,
+        #f5d76e,
+        #d6b86a,
+        #fff1a8
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-size: 200% auto;
+
+    animation:
+        projectTitle 1s ease forwards,
+        goldenShine 5s linear infinite;
+}
+
+
+/* location */
+
+.project-detail-hero p {
+    margin-top: 25px;
+    margin-bottom: 0;
+
+    font-family: "Times New Roman", serif;
+
+    font-size: 18px;
+
+    color: rgba(245, 241, 232, 0.68);
+
+    letter-spacing: 1px;
+
+    animation: fadeUp 1s ease 0.25s both;
+}
+
+
+/* ---------------------------------------------------------
+   PROJECT DETAILS
+--------------------------------------------------------- */
+
+.project-detail-section {
+    position: relative;
+
+    padding: 110px 0;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 0% 50%,
+            rgba(11, 21, 38, 0.55),
+            transparent 35%
+        ),
+        #020812;
+}
+
+
+/* ---------------------------------------------------------
+   IMAGE FRAME
+--------------------------------------------------------- */
+
+.project-detail-image {
+    position: relative;
+
+    width: 100%;
+
+    /*
+       CHANGED:
+       The original 16 / 10 ratio was too wide for your
+       portrait/square project poster.
+    */
+    aspect-ratio: 1 / 1;
+
+    padding: 10px;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #d6b86a,
+            #f3df8b 18%,
+            #0d192b 45%,
+            #020812 75%,
+            #d6b86a
+        );
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.65),
+        0 0 35px rgba(212, 175, 55, 0.08);
+
+    transition:
+        transform 0.6s ease,
+        box-shadow 0.6s ease;
+}
+
+
+/* inner image area */
+
+.project-detail-image::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 10px;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(11, 21, 38, 0.3),
+            rgba(0, 0, 0, 0.8)
+        );
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    opacity: 0;
+
+    transition: opacity 0.5s ease;
+}
+
+
+/* image */
+
+.project-detail-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    border-radius: 15px;
+
+    /*
+       Keep the entire poster visible.
+       Nothing gets cropped.
+    */
+    object-fit: contain;
+
+    background:
+        radial-gradient(
+            circle,
+            #0d192b,
+            #020812 75%
+        );
+
+    transition:
+        transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1),
+        filter 0.6s ease;
+}
+
+
+/* hover */
+
+.project-detail-image:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 40px 90px rgba(0, 0, 0, 0.75),
+        0 0 45px rgba(212, 175, 55, 0.15);
+}
+
+
+.project-detail-image:hover img {
+    transform: scale(1.045);
+
+    filter: brightness(1.05);
+}
+
+
+.project-detail-image:hover::before {
+    opacity: 1;
+}
+
+
+/* ---------------------------------------------------------
+   PROJECT INFORMATION
+--------------------------------------------------------- */
+
+.project-detail-section .section-subtitle {
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    font-family: "Times New Roman", serif;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    color: #d6b86a;
+
+    text-transform: uppercase;
+}
+
+
+/* heading */
+
+.project-detail-section h2 {
+    margin-bottom: 22px;
+
+    font-family: "Times New Roman", serif;
+
+    font-size: clamp(2.4rem, 4vw, 4rem);
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    color: #f5f1e8;
+
+    position: relative;
+}
+
+
+/* small golden glow under heading */
+
+.project-detail-section h2::after {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+    height: 3px;
+
+    margin-top: 18px;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        90deg,
+        #d6b86a,
+        #f5df8b
+    );
+}
+
+
+/* description */
+
+.project-detail-section > .container .row > .col-lg-5 > p {
+    max-width: 520px;
+
+    margin-bottom: 35px;
+
+    font-family: "Times New Roman", serif;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color: rgba(245, 241, 232, 0.68);
+}
+
+
+/* ---------------------------------------------------------
+   PROJECT INFO CARDS
+--------------------------------------------------------- */
+
+.project-info {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 14px;
+
+    margin-top: 25px;
+}
+
+
+.project-info > div {
+    padding: 20px 22px;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(15, 31, 57, 0.85),
+            rgba(4, 7, 12, 0.95)
+        );
+
+    border: 1px solid rgba(212, 175, 55, 0.18);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.03),
+        0 15px 35px rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        background 0.35s ease;
+}
+
+
+.project-info > div:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(212, 175, 55, 0.55);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(22, 43, 76, 0.95),
+            rgba(5, 9, 16, 0.98)
+        );
+}
+
+
+/* info labels */
+
+.project-info span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-family: "Times New Roman", serif;
+
+    font-size: 13px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    color: #d6b86a;
+}
+
+
+/* info values */
+
+.project-info strong {
+    display: block;
+
+    font-family: "Times New Roman", serif;
+
+    font-size: 16px;
+
+    line-height: 1.4;
+
+    font-weight: 600;
+
+    color: #f5f1e8;
+}
+
+
+/* ---------------------------------------------------------
+   STATEMENT SECTION
+--------------------------------------------------------- */
+
+.project-detail-statement {
+    position: relative;
+
+    padding: 110px 20px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(212, 175, 55, 0.08),
+            transparent 38%
+        ),
+        linear-gradient(
+            180deg,
+            #020812,
+            #050d1c
+        );
+}
+
+
+/* statement subtitle */
+
+.project-detail-statement .section-subtitle {
+    display: block;
+
+    margin-bottom: 20px;
+
+    font-family: "Times New Roman", serif;
+
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    color: #d6b86a;
+}
+
+
+/* statement heading */
+
+.project-detail-statement h2 {
+    max-width: 900px;
+
+    margin: 0 auto 35px;
+
+    font-family: "Times New Roman", serif;
+
+    font-size: clamp(2.5rem, 5vw, 5rem);
+
+    line-height: 1;
+
+    font-weight: 700;
+
+    color: #f5f1e8;
+}
+
+
+.project-detail-statement h2 span {
+    display: inline-block;
+
+    color: #d6b86a;
+
+    background: linear-gradient(
+        90deg,
+        #b8860b,
+        #f5df8b,
+        #d6b86a
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* ---------------------------------------------------------
+   BUTTON
+--------------------------------------------------------- */
+
+.project-detail-statement .primary-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 28px;
+
+    border-radius: 50px;
+
+    font-family: "Times New Roman", serif;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    color: #080a0f;
+
+    background:
+        linear-gradient(
+            135deg,
+            #b8860b,
+            #f5df8b,
+            #d6b86a
+        );
+
+    text-decoration: none;
+
+    box-shadow:
+        0 12px 30px rgba(212, 175, 55, 0.15);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.project-detail-statement .primary-btn:hover {
+    color: #080a0f;
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 18px 40px rgba(212, 175, 55, 0.28);
+}
+
+
+/* ---------------------------------------------------------
+   ANIMATIONS
+--------------------------------------------------------- */
+
+@keyframes projectTitle {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes goldenShine {
+
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   TABLET
+--------------------------------------------------------- */
+
+@media (max-width: 991px) {
+
+    .project-detail-hero {
+        min-height: auto;
+
+        padding: 120px 0 70px;
+    }
+
+
+    .project-detail-section {
+        padding: 75px 0;
+    }
+
+
+    .project-detail-image {
+        aspect-ratio: 1 / 1;
+    }
+
+
+    .project-info {
+        margin-bottom: 10px;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+--------------------------------------------------------- */
+
+@media (max-width: 767px) {
+
+    .project-detail-hero {
+        padding: 100px 20px 60px;
+    }
+
+
+    .project-detail-hero h1 {
+        font-size: 3.2rem;
+
+        letter-spacing: -1px;
+    }
+
+
+    .project-detail-hero p {
+        font-size: 16px;
+    }
+
+
+    .project-detail-section {
+        padding: 60px 20px;
+    }
+
+
+    .project-detail-image {
+        /*
+           Keep the same ratio on mobile so the
+           poster doesn't become unnecessarily small.
+        */
+        aspect-ratio: 1 / 1;
+
+        padding: 7px;
+
+        border-radius: 16px;
+    }
+
+
+    .project-detail-image img {
+        border-radius: 10px;
+    }
+
+
+    .project-info {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+
+    .project-info > div {
+        padding: 17px 18px;
+    }
+
+
+    .project-detail-statement {
+        padding: 75px 20px;
+    }
+
+
+    .project-detail-statement h2 {
+        font-size: 2.7rem;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   SMALL MOBILE
+--------------------------------------------------------- */
+
+@media (max-width: 480px) {
+
+    .project-detail-hero h1 {
+        font-size: 2.7rem;
+    }
+
+
+    .project-detail-hero .section-subtitle {
+        font-size: 11px;
+
+        letter-spacing: 2.5px;
+    }
+
+
+    .project-detail-section h2 {
+        font-size: 2.5rem;
+    }
+
+
+    .project-detail-section > .container .row > .col-lg-5 > p {
+        font-size: 16px;
+
+        line-height: 1.7;
+    }
+
+
+    .project-detail-statement h2 {
+        font-size: 2.3rem;
+    }
+
+}
