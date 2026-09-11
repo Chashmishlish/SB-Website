@@ -1,0 +1,111 @@
+/* =========================================================
+   LEGAL PAGES
+   ========================================================= */
+
+.legal-page {
+    background: #f7f6f2;
+}
+
+.legal-hero {
+    padding: 105px 20px 82px;
+    color: #ffffff;
+    text-align: center;
+    background:
+        linear-gradient(180deg, rgba(2, 8, 18, 0.72), rgba(2, 8, 18, 0.96)),
+        url("../images/Building.png") center / cover no-repeat;
+    border-bottom: 1px solid rgba(214, 184, 106, 0.22);
+}
+
+.legal-hero .section-subtitle {
+    display: inline-block;
+    color: #d6b86a;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.legal-hero .section-subtitle::after {
+    content: "";
+    display: block;
+    width: 42px;
+    height: 2px;
+    margin: 10px auto 0;
+    background: #d6b86a;
+}
+
+.legal-hero h1 {
+    margin: 18px 0 0;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(2.6rem, 5vw, 4.5rem);
+    font-weight: 600;
+    line-height: 1.12;
+}
+
+.legal-content {
+    padding: 82px 20px 95px;
+}
+
+.legal-content .container {
+    max-width: 900px;
+}
+
+.legal-intro {
+    margin-bottom: 35px;
+    color: #68717a;
+    font-size: 1rem;
+    line-height: 1.85;
+}
+
+.legal-section {
+    padding: 25px 0;
+    border-top: 1px solid rgba(23, 32, 51, 0.12);
+}
+
+.legal-section h2 {
+    margin-bottom: 12px;
+    color: #050d1c;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 1.65rem;
+    font-weight: 600;
+}
+
+.legal-section p,
+.legal-section li {
+    color: #68717a;
+    font-size: 0.95rem;
+    line-height: 1.85;
+}
+
+.legal-section ul {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.legal-section a {
+    color: #b99a4d;
+}
+
+.legal-section a:hover {
+    color: #050d1c;
+}
+
+.footer-legal-links {
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.footer-legal-links a {
+    display: block;
+}
+
+@media (max-width: 767px) {
+    .legal-hero {
+        padding: 82px 20px 68px;
+    }
+
+    .legal-content {
+        padding: 58px 20px 70px;
+    }
+
+}

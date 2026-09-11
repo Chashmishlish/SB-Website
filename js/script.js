@@ -14,6 +14,40 @@ document.addEventListener("DOMContentLoaded", () => {
         window.addEventListener("scroll", updateNavbar, { passive: true });
     }
 
+    document.querySelectorAll(".site-footer").forEach((footer) => {
+        if (footer.querySelector(".footer-legal-links")) return;
+
+        const pagePath = window.location.pathname.replace(/\\/g, "/");
+        const legalDirectory = pagePath.includes("/pages/projects/") || pagePath.includes("/pages/leadership/")
+            ? "../"
+            : pagePath.includes("/pages/")
+                ? ""
+                : "pages/";
+        const quickLinksHeading = [...footer.querySelectorAll("h4")]
+            .find((heading) => heading.textContent.trim().toLowerCase() === "quick links");
+        const quickLinksColumn = quickLinksHeading?.parentElement;
+
+        if (!quickLinksColumn) return;
+
+        const hasLegalLinks = [...quickLinksColumn.querySelectorAll("a")]
+            .some((link) => /terms-and-conditions\.html|privacy-policy\.html/.test(link.getAttribute("href") || ""));
+
+        if (hasLegalLinks) return;
+
+        const legalLinks = document.createElement("div");
+        legalLinks.className = "footer-legal-links";
+        legalLinks.innerHTML = `
+            <a href="${legalDirectory}terms-and-conditions.html">Terms &amp; Conditions</a>
+            <a href="${legalDirectory}privacy-policy.html">Privacy Policy</a>
+        `;
+        const contactLink = [...quickLinksColumn.querySelectorAll("a")]
+            .find((link) => link.textContent.trim().toLowerCase() === "contact");
+
+        contactLink
+            ? quickLinksColumn.insertBefore(legalLinks, contactLink)
+            : quickLinksColumn.append(legalLinks);
+    });
+
     const revealItems = document.querySelectorAll(
         ".home-mission, .home-leadership, .home-strengths, .home-projects, .home-banks, .home-cta, " +
         ".mission-copy, .mission-bars, .leader-tile, .strength-card, .project-preview, .project-card, .bank-flip-card, " +
