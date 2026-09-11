@@ -2061,17 +2061,29 @@ body {
             rgba(5, 13, 28, 0.10);
     }
 
+    .commitment-item {
+        border-bottom: none;
+    }
+
+    .commitment-item:nth-child(3n),
+    .commitment-item:nth-child(2n),
+    .commitment-item:nth-child(n + 4) {
+        border-right: none;
+        border-bottom: none;
+    }
+
     .commitment-item:last-child {
         border-bottom: none;
     }
 
     .commitment-item::before,
     .commitment-item:nth-child(n + 4)::before {
-        top: 62px;
+        display: none;
+    }
 
-        left: 5%;
-
-        width: 90%;
+    .commitment-number::before,
+    .commitment-number::after {
+        display: none;
     }
 
     .commitment-icon {
@@ -2103,9 +2115,7 @@ body {
 
         height: 125px;
 
-        box-shadow:
-            0 -4px 0 var(--mv-champagne),
-            0 -8px 0 rgba(214, 184, 106, 0.16);
+        box-shadow: none;
     }
 
 
@@ -2237,9 +2247,7 @@ body {
 
         height: 110px;
 
-        box-shadow:
-            0 -3px 0 var(--mv-champagne),
-            0 -7px 0 rgba(214, 184, 106, 0.15);
+        box-shadow: none;
     }
 
 
